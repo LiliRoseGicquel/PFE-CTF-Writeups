@@ -35,7 +35,7 @@ Pour vérifier la présence de données cachées, j'ai utilisé l'outil **binwal
 binwalk -e challenge.pdf 
 
 <p align="center">
-<img src="3.png" width="600">
+<img src="3.png" width="500">
 </p>
 
 **Résultats de l'analyse :**
