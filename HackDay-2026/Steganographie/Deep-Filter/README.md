@@ -7,6 +7,10 @@
 ## Objectif
 L'objectif est d'extraire un **flag caché** dans une image PNG nommée `logo.png`.
 
+<p align="center">
+  <img src="1.png" width="40%">
+</p>
+
 ## Analyse de l'énoncé
 L'énoncé fournit plusieurs indices : 
 
@@ -22,9 +26,27 @@ Plusieurs outils classiques ont été utilisés sans succès pour trouver le fla
 
 * **Binwalk :** binwalk -e logo.png a extrait des données en zlib qui n'ont pas révélé le flag.
 
+<p align="center">
+  <img src="2.png" width="40%">
+</p>
+
 * **Strings :** Aucune chaîne de caractères lisible n'a été trouvée via strings.
 
+<p align="center">
+  <img src="3.png" width="40%">
+</p>
+
 * **File :** La commande file identifie simplement le fichier comme de la donnée brute après extraction.
+
+<p align="center">
+  <img src="4.png" width="40%">
+</p>
+
+* **Cat :** La commande cat affiche simplement le contenu du fichier.
+
+<p align="center">
+  <img src="5.png" width="40%">
+</p>
 
 ## Analyse technique des filtres
 
@@ -35,6 +57,10 @@ En utilisant pngcheck -vv logo.png, on observe que seuls les filtres ** 1 ** et 
 * **Filtre 1** = Bit **0** 
 
 * **Filtre 2** = Bit **1**
+
+<p align="center">
+  <img src="6.png" width="40%">
+</p>
 
 ## Automatisation (Python)
 
