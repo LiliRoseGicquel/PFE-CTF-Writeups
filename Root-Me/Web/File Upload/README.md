@@ -73,3 +73,11 @@ Le fichier est localisé dans : `/var/www/html/shares/.admin-ed3a14b27f5b88e4f53
 <p align="center"><em>Résultat de la recherche du flag sur le système</em></p>
 
 **Flag récupéré :** RM{FLAG_RECUPERE_AVEC_SUCCES}
+
+### Remédiations proposées :
+
+Pour corriger cette vulnérabilité, le développeur devrait appliquer les mesures suivantes :
+* **Vérification stricte des extensions :** N'autoriser que les extensions nécessaires (ex: .jpg, .png, .pdf) via une "Allow List".
+* **Validation du type MIME :** Vérifier le contenu réel du fichier et pas seulement son extension.
+* **Renommage des fichiers :** Renommer systématiquement les fichiers uploadés avec un nom aléatoire et sans extension exécutable.
+* **Désactivation de l'exécution :** Configurer le répertoire de stockage (/shares/) pour empêcher l'exécution de scripts PHP (via un fichier .htaccess ou la configuration du serveur web).
