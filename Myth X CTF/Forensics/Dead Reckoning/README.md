@@ -86,13 +86,15 @@ Le format attendu est MYTHX{<FULL_SESSION_TOKEN>_<KEY_SEGMENT>}.
 
 ## Échecs et Itérations
 
-Malgré une compréhension complète des mécanismes, le flag final n'a pas pu être validé. Plusieurs hypothèses ont été explorées sans succès :
+Malgré l’identification de tous les composants, le flag final n'a pas pu être validé. Plusieurs pistes ont été explorées sans succès :
 
-* **L'hypothèse du Hash direct :** Utilisation du hash complet ou court (1057bbcc) du commit 3 comme token.
+* **Piste du Hash Git :** Tentatives d'utiliser le hash complet ou court (1057bbcc) du commit 3 comme token unique.
 
-* **L'hypothèse du code secret :** Intégration du mot OKAYPN comme préfixe au token de session.
+* **Piste de la Stéganographie :** Intégration du code secret OKAYPN comme préfixe ou mot de passe du token.
 
-* **L'hypothèse du fichier chiffré :** Le commit 04b74bb ajoute un fichier config.enc. Il est fort probable que le véritable token soit contenu dans ce fichier, nécessitant le hash du commit ou le mot OKAYPN comme clé de déchiffrement AES. Sans ce déchiffrement, l'assemblage manuel du token est resté infructueux.
+* **Piste du Fichier Chiffré :** Le fichier config.enc (ajouté au commit 04b74bb) semble être le véritable réceptacle du token. Son déchiffrement — probablement via AES en utilisant le hash du commit 3 ou le mot OKAYPN comme clé — constitue le verrou final du challenge.
+
+Sans ce déchiffrement final, la structure exacte du <FULL_SESSION_TOKEN> est restée indéterminée, illustrant la difficulté "Hard" de cette épreuve de corrélation.
 
 ## Conclusion
 
