@@ -1,11 +1,10 @@
 # Write-Up : Dead Reckoning
 
-Plateforme : MYTHX: AN ENDGAME PROTOCOL
+**Plateforme :** MYTHX: AN ENDGAME PROTOCOL    
+**Catégorie :** Forensics    
+**Difficulté :** Hard    
 
-Catégorie : Forensics
-
-Difficulté : Hard
-Objectif
+## Objectif
 
 L'objectif est d'analyser les traces laissées par un "insider threat" (menace interne) sur le poste de travail WS-019 afin de récupérer un actif sensible exfiltré juste avant la révocation de ses accès.
 
