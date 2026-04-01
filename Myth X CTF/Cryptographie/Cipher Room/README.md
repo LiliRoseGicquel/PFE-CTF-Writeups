@@ -1,4 +1,4 @@
-# Write-Up : Cipher Room (Investigation Report)
+# Write-Up : Cipher Room
 
 **Plateforme :** MYTHX: AN ENDGAME PROTOCOL   
 **Catégorie :** Cryptography   
