@@ -92,7 +92,7 @@ Malgré l’identification de tous les composants, le flag final n'a pas pu êtr
 
 * **Piste de la Stéganographie :** Intégration du code secret OKAYPN comme préfixe ou mot de passe du token.
 
-* **Piste du Fichier Chiffré :** Le fichier config.enc (ajouté au commit 04b74bb) semble être le véritable réceptacle du token. Son déchiffrement — probablement via AES en utilisant le hash du commit 3 ou le mot OKAYPN comme clé — constitue le verrou final du challenge.
+* **Piste du Fichier Chiffré :** Le fichier config.enc (ajouté au commit 04b74bb) semble être le véritable réceptacle du token. Son déchiffrement, probablement via AES en utilisant le hash du commit 3 ou le mot OKAYPN comme clé, constitue le verrou final du challenge.
 
 Sans ce déchiffrement final, la structure exacte du <FULL_SESSION_TOKEN> est restée indéterminée, illustrant la difficulté "Hard" de cette épreuve de corrélation.
 
