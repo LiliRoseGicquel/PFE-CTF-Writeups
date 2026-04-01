@@ -32,7 +32,7 @@ L'analyse commence par l'exploration de la page d'accueil du blog pour identifie
 
 ## Recherche des Paramètres
 
-L'article intitulé "Why Your robots.txt Might Be Your Biggest Leak" est une indication directe d'examiner le fichier robots.txt à la racine du site.
+L'article intitulé "Why Your robots.txt Might Be Your Biggest Leak" est une indication directe d'examiner le fichier `robots.txt` à la racine du site.
 
 En accédant à `http://[URL]/robots.txt`, on découvre plusieurs répertoires interdits aux crawlers:
 
@@ -49,7 +49,7 @@ Cependant, une directive d'indexation supplémentaire en bas du fichier attire l
 
 ## Déchiffrement et Analyse
 
-En naviguant vers http://[URL]/sitemap.xml, nous accédons à la structure XML listant les URL du site. Un commentaire de développeur révèle un contenu de test (staging) qui n'a pas été retiré avant la mise en ligne:
+En naviguant vers `http://[URL]/sitemap.xml`, nous accédons à la structure XML listant les URL du site. Un commentaire de développeur révèle un contenu de test (staging) qui n'a pas été retiré avant la mise en ligne:
 
 Ce commentaire précède une URL spécifique : `/c7f8-staging-panel`.
 
