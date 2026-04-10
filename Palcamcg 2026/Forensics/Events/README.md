@@ -1,8 +1,8 @@
 # Write-Up : Events
 
-**Plateforme :** SoterCTF
-**Catégorie :** Forensic
-**Difficulté :** Medium
+**Plateforme :** SoterCTF    
+**Catégorie :** Forensic    
+**Difficulté :** Medium    
 
 ## Objectif
 
@@ -29,13 +29,13 @@ Après avoir téléchargé l'archive, nous nous retrouvons avec trois fichiers d
 <p align="center"><em>Archive contenant les 3 fichiers</em> </p>
 
 L'analyse du fichier lang révèle une information cruciale sur l'environnement de la victime :
-System Locale: LANG=en_US.UTF-8, mais surtout un agencement de clavier espagnol (VC Keymap: es, X11 Layout: es).
+System Locale: `LANG=en_US.UTF-8`, mais surtout un agencement de clavier espagnol (VC Keymap: es, X11 Layout: es).
 
 ## Recherche et Investigation
 
 L'analyse de l'exécutable game avec la commande strings montre des références à figlet et au nom du challenge, mais aucun flag en clair. L'hypothèse s'oriente alors vers un keylogger (enregistreur de frappe).
 
-Le fichier .log_original semble être une capture brute des événements d'entrée Linux (/dev/input/event). En utilisant la commande xxd, on observe une structure répétitive de blocs de 24 octets, typique des structures input_event du noyau Linux.
+Le fichier `.log_original` semble être une capture brute des événements d'entrée Linux (/dev/input/event). En utilisant la commande `xxd`, on observe une structure répétitive de blocs de 24 octets, typique des structures `input_event` du noyau Linux.
 
 <p align="center">
 <img src="3.png" width="700">
@@ -69,7 +69,7 @@ with open(".log_original", "rb") as f:
 <p align="center">
 <img src="4.png" width="700">
 </p>
-<p align="center"><em>Exécution du fichier python pour afficher les Linux Keycodes</em> </p>
+<p align="center"><em>Extrait de l'exécution du fichier python pour afficher les Linux Keycodes</em> </p>
 
 | Code Touche (ScanCode) | Interprétation (Layout ES) |
 | :--- | :--- |
