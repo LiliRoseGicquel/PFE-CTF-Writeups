@@ -26,7 +26,7 @@ Les informations extraites de la plateforme et de l'image sont les suivantes :
 L'esthétique globale (briques, mosaïques, style organique) pointe immédiatement vers le Modernisme Catalan, un mouvement architectural majeur à Barcelone.
 
 <p align="center">
-<img src="2.png" width="700">
+<img src="2.jpg" width="700">
 </p>
 <p align="center"><em>Image originale fournie avec la distorsion en spirale</em> </p>
 
