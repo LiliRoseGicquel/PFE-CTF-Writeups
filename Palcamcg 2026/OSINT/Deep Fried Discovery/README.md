@@ -1,8 +1,8 @@
 # Write-Up : Deep Fried Discovery
 
-**Plateforme :** SoterCTF
-**Catégorie :** OSINT
-**Difficulté :** Easy
+**Plateforme :** SoterCTF  
+**Catégorie :** OSINT  
+**Difficulté :** Easy  
 
 ## Objectif
 
